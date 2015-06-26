@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" ng-app="poppyGP" ng-controller="View as vm">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="title" content="poppyGP Player">
+  <meta name="description" content="poppyGP - providing the best of the world's premiere single-seater open-wheel racing events, 24/7, 365!">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title data-ng-bind-template="{{vm.title}} · poppyGP Player">poppyGP Player</title>
+
+  <meta property="og:site_name" content="poppyGP Player">
+  <meta property="og:title" content="poppyGP Player">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="poppyGP - providing the best of the world's premiere single-seater open-wheel racing events, 24/7, 365!">
+
+  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+  <link rel="stylesheet" href="app/vendor.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,500,700,400italic" rel="stylesheet" type="text/css">
+
+  <!-- bower:css -->
+  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src}) styles/app.css -->
+  <!-- inject:css -->
+  <!-- css files will be automatically insert here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+<body ng-cloak layout="column">
+  <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="iframe-container" ng-include="''">
+    <iframe src="http://ustream.tv/embed/20560398?wmode=direct&showtitle=false" frameborder="no"></iframe>
+  </div>
+
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span class="brand stripes" ng-click="vm.openMenu()">
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#2ab4a5;"/>
+        </svg>
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#c30000"/>
+        </svg>
+        <svg height="32" width="30">
+          <polygon points="30,0 10,32 0,32 20,0" style="fill:#ffffff; stroke:#999999; stroke-width:1;"/>
+        </svg>
+      </span>
+      <h2 ng-click="vm.openMenu()">poppyGP</h2>
+      <span flex></span>
+    </div>
+  </md-toolbar>
+  
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
+
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- js files will be automatically insert here -->
+  <!-- endinject -->
+
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+</body>
+</html>
