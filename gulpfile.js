@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  *  Welcome to your gulpfile!
  *  The gulp tasks are splitted in several files in the gulp directory
@@ -26,4 +27,37 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
  */
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
+=======
+'use strict';
+
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var wrench = require('wrench');
+
+var options = {
+  src: 'src',
+  dist: 'dist',
+  tmp: '.tmp',
+  e2e: 'e2e',
+  errorHandler: function(title) {
+    return function(err) {
+      gutil.log(gutil.colors.red('[' + title + ']'), err.toString());
+      this.emit('end');
+    };
+  },
+  wiredep: {
+    directory: 'bower_components',
+    exclude: [/jquery/]
+  }
+};
+
+wrench.readdirSyncRecursive('./gulp').filter(function(file) {
+  return (/\.(js|coffee)$/i).test(file);
+}).map(function(file) {
+  require('./gulp/' + file)(options);
+});
+
+gulp.task('default', ['clean'], function () {
+    gulp.start('build');
+>>>>>>> e8c8c0cf9c81c15387a61bc891adf244c7bafb70
 });

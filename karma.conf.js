@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 var path = require('path');
 var conf = require('./gulp/conf');
 
@@ -40,13 +41,28 @@ module.exports = function(config) {
     ngHtml2JsPreprocessor: {
       stripPrefix: 'src/',
       moduleName: 'pgpPlayer'
+=======
+module.exports = function(config) {
+
+  var configuration = {
+    autoWatch : false,
+
+    frameworks: ['jasmine'],
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'src/',
+      moduleName: 'gulpAngular'
+>>>>>>> e8c8c0cf9c81c15387a61bc891adf244c7bafb70
     },
 
     browsers : ['PhantomJS'],
 
     plugins : [
       'karma-phantomjs-launcher',
+<<<<<<< HEAD
       'karma-angular-filesort',
+=======
+>>>>>>> e8c8c0cf9c81c15387a61bc891adf244c7bafb70
       'karma-jasmine',
       'karma-ng-html2js-preprocessor'
     ],
