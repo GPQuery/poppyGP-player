@@ -1,0 +1,44 @@
+# Bower & npm #
+###############
+node_modules/
+bower_components/
+
+# Yeoman and Gulp #
+###################
+.sass-cache/
+.idea/
+.tmp/
+dist/
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# Miscellaneous #
+#################
+!.gitkeep
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea
+app/jspm_packages
+*.lnk
+*alias
+tmp
+
