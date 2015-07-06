@@ -6,34 +6,30 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout, $mdSidenav, $mdMedia, $mdUtil, $log) {
     var vm = this;
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1435459412847;
-    vm.showToastr = showToastr;
+    vm.toggleLeft     = buildToggler('left');
+    vm.toggleRight    = buildToggler('right');
+    vm.isChatOpen     = true;
+
+    function buildToggler(navID) {
+      var debounceFn = $mdUtil.debounce(function() {
+        $mdSidenav(navID).toggle().then(function() {
+          vm.isChatOpen = false;
+        });
+      }, 300);
+      return debounceFn;
+    }
 
     activate();
 
     function activate() {
-      getWebDevTec();
       $timeout(function() {
-        vm.classAnimation = 'rubberBand';
+        buildToggler();
+        $log.info('Activated MainController');
       }, 4000);
     }
 
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
-
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
-    }
   }
 })();

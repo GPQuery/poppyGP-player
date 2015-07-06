@@ -5,60 +5,129 @@
 // bower:scss
 // endbower
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+@mixin iframe-responsive($padding) {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: $padding;
+}
+
+$background-color: #222;
+
+$swift-ease-out-duration: 0.6s !default; //0.4s
+$swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
+$swift-ease-out: all $swift-ease-out-duration $swift-ease-out-timing-function !default;
+
+$swift-ease-in-duration: 0.4s !default; //0.3s
+$swift-ease-in-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2) !default;
+$swift-ease-in: all $swift-ease-in-duration $swift-ease-in-timing-function !default;
+
+$swift-ease-in-out-duration: 0.8s !default; //0.5s
+$swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1) !default;
+$swift-ease-in-out: all $swift-ease-in-out-duration $swift-ease-in-out-timing-function !default;
 
 html {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Ubuntu', sans-serif;
 }
-
-[layout=row] {
-  flex-direction: row;
+body {
+  overflow: hidden;
 }
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
-  }
-}
-
-md-toolbar.md-default-theme {
-  background-color: black;
-}
-
-section.jumbotron {
-  margin-bottom: 30px;
-  padding: 1px 30px;
-  background-color: #5aadbb;
-  text-align: center;
-
-  color: white;
-
-  h1 {
-    font-size: 3em;
-  }
-}
-
-.techs {
-  display: flex;
-  flex-flow: row wrap;
-
-  md-card {
-    width: 30%;
-
-    img.pull-right {
-      float: right;
-      width: 50px;
+md-toolbar {
+  &.toolbar-main {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    .brand-stripes {
+      cursor: pointer;
+    }
+    .brand-text {
+      cursor: pointer;
     }
   }
+  &.toolbar-bottom {
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+md-content {
+  &.content-main {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background-color: $background-color;
+    overflow-y: hidden;
+  }
+}
+md-sidenav {
+  &.sidenav-main,
+  &.sidenav-chat {
+    background-color: transparent;
+    md-toolbar,
+    md-content {
+      background-color: transparent;
+    }
+  }
+  &.sidenav-chat {
+    min-width: 33%;
+    max-width: 33%;
+    width: 33%;
+    @media screen and (min-width: 1200px) {
+      transition: $swift-ease-in-out;
+      min-width: 25%;
+      max-width: 25%;
+      width: 25%;
+    }
+    md-content {
+      .webchat-frame {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        min-height: 100%;
+        max-height: 100%;
+        width: 100%;
+        border: 0 none;
+      }
+    }
+  }
+}
+.video-frame-container {
+  overflow-y: hidden;
+  >.video-frame {
+    >iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+    /*
+    @media screen and (max-width: 960px) {
+      //@include iframe-responsive(75.00%);
+      transition: $swift-ease-in-out;
+    }
+    @media screen and (min-width: 960px) {
+      //@include iframe-responsive(66.67%);
+      transition: $swift-ease-in-out;
+    }
+    @media screen and (min-width: 1200px) {
+      //@include iframe-responsive(56.25%);
+      transition: $swift-ease-in-out;
+    }
+    */
+  }
+  background-color: transparent;
 }
 
 /**
