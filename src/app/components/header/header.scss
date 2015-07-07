@@ -1,0 +1,22 @@
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 250;
+  md-toolbar.toolbar-main {
+    background-color: transparent;
+    .brand-stripes {
+      cursor: pointer;
+    }
+    .brand-text {
+      cursor: pointer;
+    }
+    .md-button.md-icon-button {
+      &.toggle-button {
+        //margin-left: 14px;
+      }
+
+    }
+  }
+}

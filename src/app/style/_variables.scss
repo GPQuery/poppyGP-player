@@ -1,0 +1,25 @@
+// Background Colour, Fallback
+// ------------------------------
+$background-color: #222;
+
+// Swift Animations
+// ------------------------------
+$swift-ease-out-duration: 0.4s !default; //0.4s
+$swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
+$swift-ease-out: all $swift-ease-out-duration $swift-ease-out-timing-function !default;
+
+$swift-ease-in-duration: 0.3s !default; //0.3s
+$swift-ease-in-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2) !default;
+$swift-ease-in: all $swift-ease-in-duration $swift-ease-in-timing-function !default;
+
+$swift-ease-in-out-duration: 0.5s !default; //0.5s
+$swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1) !default;
+$swift-ease-in-out: all $swift-ease-in-out-duration $swift-ease-in-out-timing-function !default;
+
+// Smaller Toolbars
+// ------------------------------
+$toolbar-short-height:        48px !default;
+$toolbar-mini-height:         36px !default;
+$toolbar-small-indent-margin: 32px !default;
+$toolbar-small-padding:       8px !default;
+$toolbar-tools-small-height:  32px !default;

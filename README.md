@@ -1,5 +1,7 @@
-Poppy Grand Prix Player
-=======================
+poppyGP Player
+==============
+
+Community-driven single-page web application featuring video stream, schedule, and IRC webchat
 
 
 ## Overview

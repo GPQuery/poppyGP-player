@@ -1,0 +1,20 @@
+<md-toolbar class="toolbar-bottom">
+
+  <div class="md-toolbar-tools">
+
+    <h3>Now Playing:</h3>
+    <span flex></span>
+
+      <md-button ng-repeat="button in vc.buttons"
+                 class="md-icon-button" 
+                 id="{{button.id}}"
+                 aria-label="{{button.label}}"
+                 ng-click="vm.launch(button.val)">
+        <md-icon class="fa material-fa" ng-bind-html="button.icon"></md-icon>
+        <md-tooltip>{{button.label}}</md-tooltip>
+      </md-button>
+
+  </div>
+
+</md-toolbar>
+

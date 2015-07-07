@@ -1,0 +1,20 @@
+/*
+header {
+  z-index: 1;
+  md-toolbar {
+    &.toolbar-main {
+      z-index: 5;
+    }
+  }
+}
+
+md-sidenav {
+  &.sidenav-chat,
+  &.sidenav-main {
+    z-index: 50;
+    md-button {
+      z-index: 75;
+    }
+  }
+}
+*/
