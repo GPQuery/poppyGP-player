@@ -2,6 +2,23 @@
   'use strict';
 
   angular
-    .module('poppyGP', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial']);
+    .module('poppyGP', [
+
+      // Angular Modules
+      'ngAnimate', 
+      'ngCookies', 
+      'ngTouch', 
+      'ngSanitize', 
+      'ngResource', 
+      'ngMaterial',
+
+      // Third-Party Modules
+      'ui.router', 
+      //'xml',
+
+      // Internal Modules
+      //'poppyGP.playlist'
+
+      ]);
 
 })();
