@@ -3,18 +3,15 @@
 
   angular
     .module('poppyGP')
-    .directive('gpHeader', gpHeader);
+    .directive('gpNavbar', gpNavbar);
 
   /** @ngInject */
-  function gpHeader() {
+  function gpNavbar() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/header/header.html'
+      templateUrl: 'app/components/navbar/navbar.html'
     };
-
     return directive;
-
-    
   }
 
 })();
