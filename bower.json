@@ -1,6 +1,6 @@
 {
   "name": "poppyGP",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "dependencies": {
     "modernizr": "~2.8.3",
     "angular-animate": "~1.4.1",
@@ -9,7 +9,7 @@
     "angular-sanitize": "~1.4.1",
     "angular-resource": "~1.4.1",
     "angular-ui-router": "~0.2.15",
-    "angular-material": "~0.9.7",
+    "angular-material": "~0.10.0",
     "malarkey": "yuanqing/malarkey#~1.3.0",
     "toastr": "~2.1.1",
     "moment": "~2.10.3",

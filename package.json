@@ -1,6 +1,6 @@
 {
-  "name": "poppyGpPlayer",
-  "version": "0.0.1",
+  "name": "poppyGP",
+  "version": "0.3.0",
   "dependencies": {},
   "scripts": {
     "test": "gulp test"

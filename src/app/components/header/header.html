@@ -19,36 +19,16 @@
     <h2 class="brand-text" ng-click="vm.toggleLeft()">poppyGP</h2>
 
     <span flex></span>
-<!--
-    <span flex="33" flex-gt-lg="25" hide-sm hide-md>
-
-        <md-button class="md-icon-button toggle-button" 
-                   aria-label="Show Schedule"
-                   ng-show="!vm.isChatOpen"
-                   ng-click="vm.openChat()">
-          <md-icon class="material-icons">&#xE5C4;</md-icon>
-          <md-tooltip>Show Schedule</md-tooltip>
-        </md-button>
-
-        <md-button class="md-icon-button toggle-button" 
-                   aria-label="HideSchedule"
-                   ng-show="vm.isChatOpen"
-                   ng-click="vm.closeChat()">
-          <md-icon class="material-icons">&#xE5CD;</md-icon>
-          <md-tooltip>Hide Schedule</md-tooltip>
-        </md-button>
-
-    </span>
--->
-        <md-button class="md-icon-button toggle-button" 
-                   aria-label="Show Schedule"
-                   ng-click="vm.toggleChat()">
-          <md-icon class="material-icons"
-                   ng-show="!vm.isChatOpen">&#xE5C4;</md-icon>
-          <md-icon class="material-icons"
-                   ng-show="vm.isChatOpen">&#xE5CD;</md-icon>
-          <md-tooltip>Webchat</md-tooltip>
-        </md-button>
+    
+    <md-button class="md-icon-button toggle-button" 
+               aria-label="Show Schedule"
+               ng-click="vm.toggleChat()">
+      <md-icon class="material-icons"
+               ng-show="!vm.isChatOpen">&#xE5C4;</md-icon>
+      <md-icon class="material-icons"
+               ng-show="vm.isChatOpen">&#xE5CD;</md-icon>
+      <md-tooltip>Webchat</md-tooltip>
+    </md-button>
 
 
   </div>
