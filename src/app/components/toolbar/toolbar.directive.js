@@ -3,14 +3,14 @@
 
   angular
     .module('poppyGP')
-    .directive('gpFooter', gpFooter);
+    .directive('gpToolbar', gpToolbar);
 
   /** @ngInject */
-  function gpFooter() {
+  function gpToolbar() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/footer/footer.html',
-      controller: FooterController,
+      templateUrl: 'app/components/toolbar/toolbar.html',
+      controller: ToolbarController,
       controllerAs: 'vc'
     };
 
@@ -18,7 +18,7 @@
   }
 
   /** @ngInject */
-  function FooterController($log) {
+  function ToolbarController($log) {
     var vm = this;
 
     vm.buttons = [{
