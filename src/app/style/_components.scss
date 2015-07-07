@@ -15,18 +15,6 @@ md-toolbar md-icon.fa.material-fa {
   -webkit-font-smoothing: antialiased;
 }
 
-// Toolbar Top
-// ------------------------------
-md-toolbar {
-  &.toolbar-main {
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-}
-
 // Toolbar Small
 // ------------------------------
 md-toolbar {
