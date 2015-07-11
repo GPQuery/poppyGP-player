@@ -1,0 +1,18 @@
+<md-content class="gp-tab-content"
+            layout="column"
+            flex>
+  <md-tabs 
+           flex>
+
+    <md-tab ng-repeat="tab in vmm.tabsContent">
+      <md-tab-label>
+        <gp-icon class="fa fa-fw material-icons"
+                 ng-class="tab.icon">
+        </gp-icon>
+      </md-tab-label>
+      <md-tab-content ng-bind-html="tab.template">
+      </md-tab-content>
+    </md-tab>
+
+  </md-tabs>
+</md-content>
