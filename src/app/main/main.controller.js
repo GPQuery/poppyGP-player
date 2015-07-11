@@ -15,6 +15,15 @@
     vm.openChat       = buildRightOpen();
     vm.isChatOpen     = $mdMedia('gt-md');
 
+    activate();
+
+    function activate() {
+      $timeout(function() {
+        $log.info('Activated MainController');
+      }, 4000);
+    }
+
+
     function buildLeftToggler() {
       var debounceFn = $mdUtil.debounce(function() {
         $mdSidenav('left').toggle().then(function() {
@@ -52,14 +61,6 @@
       }, 300);
       return debounceFn;
     }
-
-    activate();
-
-    function activate() {
-      $timeout(function() {
-        $log.info('Activated MainController');
-      }, 4000);
-    }
-
+    
   }
 })();

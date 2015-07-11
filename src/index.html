@@ -69,25 +69,22 @@
                 flex ui-view>
     </md-content>
 
-    <!-- Webchat -->
-    <md-sidenav class="sidenav-chat md-sidenav-right"
+    <md-sidenav class="md-sidenav-right"
                 md-is-open="vm.isChatOpen"
                 md-is-locked-open="vm.isChatOpen && $mdMedia('gt-md')"
                 md-component-id="right">
+      <!--
       <md-toolbar class="md-toolbar-tall">
         <div class="md-toolbar-tools">
-          <span>Webchat</span>
+          <span></span>
           <span flex></span>
         </div>
       </md-toolbar>
-      <md-content flex>
-        <iframe class="webchat-frame" 
-                layout-fill
-                src="https://kiwiirc.com/client/irc.snoonet.org/?nick=poppygp-|?&theme=mini#f1">
-        </iframe>
-      </md-content>
+      -->
+      <gp-tab-content flex>
+      </gp-tab-content>
 
-      <md-toolbar></md-toolbar>
+      
 
     </md-sidenav>
 

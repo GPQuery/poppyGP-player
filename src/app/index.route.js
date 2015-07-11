@@ -19,7 +19,7 @@
         controllerAs: 'sc'
       });
 
-    $urlRouterProvider.otherwise('/test');
+    $urlRouterProvider.otherwise('/home');
   }
 
 })();
