@@ -53,15 +53,15 @@ md-content {
 // Sidenavs
 // ------------------------------
 md-sidenav {
-  &.sidenav-main, 
-  &.sidenav-chat {
+  &.md-sidenav-left, 
+  &.md-sidenav-right {
     background-color: transparent;
     md-toolbar,
     md-content {
       background-color: transparent;
     }
   }
-  &.sidenav-chat {
+  &.md-sidenav-right {
     @include absolute-width(33%);
     @media screen and (min-width: 1200px) {
       transition: $swift-ease-in-out;
