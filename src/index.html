@@ -25,7 +25,7 @@
 
   <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,400italic">
 
   <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
   <!-- bower:css -->
@@ -52,6 +52,10 @@
 
   <md-content class="content-main" flex layout-fill layout="row">
 
+
+    <!-- Sidenav-Left
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
     <md-sidenav class="sidenav-main md-sidenav-left"  
                 md-component-id="left">
       <md-toolbar class="md-toolbar-tall">
@@ -64,11 +68,19 @@
 
     </md-sidenav>
 
+
+    <!-- Content Container
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
     <md-content class="video-frame-container" 
                 layout-fill layout="column" 
                 flex ui-view>
     </md-content>
 
+
+    <!-- Sidenav-Right
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    
     <md-sidenav class="md-sidenav-right"
                 md-is-open="vm.isChatOpen"
                 md-is-locked-open="vm.isChatOpen && $mdMedia('gt-md')"

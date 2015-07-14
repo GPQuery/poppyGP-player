@@ -1,9 +1,19 @@
+
+// Global Variables
+// ------------------------------
+
+$font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+
 // Background Colour, Fallback
 // ------------------------------
+
 $background-color: #222;
 
-// Swift Animations
+
+// Swift Animations from ngMaterial
 // ------------------------------
+
 $swift-ease-out-duration: 0.4s !default; //0.4s
 $swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
 $swift-ease-out: all $swift-ease-out-duration $swift-ease-out-timing-function !default;
@@ -16,8 +26,10 @@ $swift-ease-in-out-duration: 0.5s !default; //0.5s
 $swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1) !default;
 $swift-ease-in-out: all $swift-ease-in-out-duration $swift-ease-in-out-timing-function !default;
 
+
 // Smaller Toolbar Sizes
 // ------------------------------
+
 $toolbar-short-height:        48px !default;
 $toolbar-mini-height:         36px !default;
 $toolbar-small-indent-margin: 32px !default;

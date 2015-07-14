@@ -1,3 +1,11 @@
+md-sidenav {
+  &.md-sidenav-right,
+  &.md-sidenav-left {
+    * {
+      z-index: 160;
+    }
+  }
+}
 /*
 header {
   z-index: 1;

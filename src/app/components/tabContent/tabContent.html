@@ -1,4 +1,4 @@
-<md-content class="gp-tab-content"
+<md-content class="gp-tab-body"
             layout="column"
             flex>
   <md-tabs 
@@ -10,8 +10,8 @@
                  ng-class="tab.icon">
         </gp-icon>
       </md-tab-label>
-      <md-tab-content ng-bind-html="tab.template">
-      </md-tab-content>
+      <md-tab-body ng-include="tab.template">
+      </md-tab-body>
     </md-tab>
 
   </md-tabs>
