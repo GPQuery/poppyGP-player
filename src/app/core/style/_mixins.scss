@@ -2,25 +2,11 @@
 // Responsive Iframe
 // ------------------------------
 
-@mixin iframe-responsive-container($ratio) {
-  &::before {
-    content: "";
-    overflow-y: hidden;
-    background-color: transparent;
-  }
+@mixin responsive-iframe($ratio) {
   height: 0;
   overflow: hidden;
   position: relative;
   padding-bottom: $ratio;
-  >iframe {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
 }
 
 

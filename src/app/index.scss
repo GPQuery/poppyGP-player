@@ -6,6 +6,25 @@
 @import 'core/style/foundation';
 @import 'core/style/variables';
 @import 'core/style/mixins';
+@import 'core/style/structure';
+
+.video-frame-outer {
+  overflow-y: hidden;
+  background-color: transparent;
+  @include absolute-height(100%);
+  @include absolute-width(100%);
+  .video-frame {
+    @include responsive-iframe(56.25%);
+    >iframe,
+    >object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
 
 /**
  *  The import of foundation is made manually because there is still no links of the

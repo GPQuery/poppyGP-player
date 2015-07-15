@@ -33,7 +33,23 @@ This repository is home to the project's "new" versions following the `v1.0.0` r
 [yo-gulp-ng]://github.com/Swiip/generator-gulp-angular
 [bower]://bower.io
 [npm]://npmjs.com
+[foundation]://foundation.zurb.com/
 [ngFoundation]://pineconellc.github.io/angular-foundation/
+
+
+## Content
+
+```
+
+```
+ - Component
+   - Video Frame
+   - Schedule
+     - Track List
+     - Now Playing
+     - Just Watched
+     - Coming Up
+   -  
 
 ## Tasklist
 
