@@ -1,6 +1,14 @@
-function runBlock ($log) {
-  'ngInject';
-  $log.debug('runBlock end');
-}
+(function() {
+  'use strict';
 
-export default runBlock;
+  angular
+    .module('poppyGP')
+    .run(runBlock);
+
+  /** @ngInject */
+  function runBlock($log) {
+
+    $log.debug('runBlock end');
+  }
+
+})();

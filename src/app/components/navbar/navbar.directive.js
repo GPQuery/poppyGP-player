@@ -1,8 +1,13 @@
-class NavbarDirective {
-  constructor () {
-    'ngInject';
+(function() {
+  'use strict';
 
-    let directive = {
+  angular
+    .module('poppyGP')
+    .directive('acmeNavbar', acmeNavbar);
+
+  /** @ngInject */
+  function acmeNavbar() {
+    var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
@@ -14,16 +19,14 @@ class NavbarDirective {
     };
 
     return directive;
+
+    /** @ngInject */
+    function NavbarController(moment) {
+      var vm = this;
+
+      // "vm.creation" is avaible by directive option "bindToController: true"
+      vm.relativeDate = moment(vm.creationDate).fromNow();
+    }
   }
-}
 
-class NavbarController {
-  constructor (moment) {
-    'ngInject';
-
-    // "this.creation" is avaible by directive option "bindToController: true"
-    this.relativeDate = moment(this.creationDate).fromNow();
-  }
-}
-
-export default NavbarDirective;
+})();
