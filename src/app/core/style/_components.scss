@@ -1,3 +1,6 @@
+
+
+/*
 // Font-Awesome Toolbar Icons
 // ------------------------------
 md-toolbar md-icon.fa.material-fa {
@@ -53,7 +56,7 @@ md-content {
 // Sidenavs
 // ------------------------------
 md-sidenav {
-  &.md-sidenav-left, 
+  &.md-sidenav-left,
   &.md-sidenav-right {
     background-color: transparent;
     md-toolbar,
@@ -81,7 +84,6 @@ md-sidenav {
     }
   }
 
-  // TODO: Fix Close Animation
   &.md-locked-open.md-closed-add-active,
   &.md-locked-open-remove-active.md-closed,
   &.md-locked-open-remove-active.md-closed-add-active {
@@ -89,34 +91,4 @@ md-sidenav {
   }
 }
 
-// Video Iframe
-// ------------------------------
-.video-frame-container {
-  overflow-y: hidden;
-  >.video-frame {
-    >iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-    }
-    /*
-    @media screen and (max-width: 960px) {
-      //@include iframe-responsive(75.00%);
-      transition: $swift-ease-in-out;
-    }
-    @media screen and (min-width: 960px) {
-      //@include iframe-responsive(66.67%);
-      transition: $swift-ease-in-out;
-    }
-    @media screen and (min-width: 1200px) {
-      //@include iframe-responsive(56.25%);
-      transition: $swift-ease-in-out;
-    }
-    */
-  }
-  background-color: transparent;
-}
+*/

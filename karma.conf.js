@@ -14,8 +14,7 @@ function listFiles() {
 
   return wiredep(wiredepOptions).js
     .concat([
-      path.join(conf.paths.src, '/app/**/*.module.js'),
-      path.join(conf.paths.src, '/app/**/*.js'),
+      path.join(conf.paths.tmp, '/serve/app/index.module.js'),
       path.join(conf.paths.src, '/**/*.spec.js'),
       path.join(conf.paths.src, '/**/*.mock.js'),
       path.join(conf.paths.src, '/**/*.html')
@@ -31,11 +30,7 @@ module.exports = function(config) {
 
     autoWatch: false,
 
-    frameworks: ['jasmine', 'angular-filesort'],
-
-    angularFilesort: {
-      whitelist: [path.join(conf.paths.src, '/**/!(*.html|*.spec|*.mock).js')]
-    },
+    frameworks: ['jasmine'],
 
     ngHtml2JsPreprocessor: {
       stripPrefix: 'src/',
@@ -46,7 +41,6 @@ module.exports = function(config) {
 
     plugins : [
       'karma-phantomjs-launcher',
-      'karma-angular-filesort',
       'karma-jasmine',
       'karma-ng-html2js-preprocessor'
     ],

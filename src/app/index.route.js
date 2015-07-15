@@ -1,25 +1,14 @@
-(function() {
-  'use strict';
+function routerConfig ($stateProvider, $urlRouterProvider) {
+  'ngInject';
+  $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: 'app/main/main.html',
+      controller: 'MainController',
+      controllerAs: 'main'
+    });
 
-  angular
-    .module('poppyGP')
-    .config(routeConfig);
+  $urlRouterProvider.otherwise('/');
+}
 
-  /** @ngInject */
-  function routeConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/home',
-        templateUrl: 'app/main/main.html'
-      })
-      .state('test', {
-        url: '/test',
-        templateUrl: 'app/test/test.html',
-        controller: 'TestController',
-        controllerAs: 'sc'
-      });
-
-    $urlRouterProvider.otherwise('/home');
-  }
-
-})();
+export default routerConfig;
